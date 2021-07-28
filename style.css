@@ -1,0 +1,367 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+   min-height: 100%;
+}
+.slider-checkbox{
+    justify-content: center;
+    text-align: -webkit-center;
+    display: flex;
+    align-items: center;
+}
+.slider-checkbox [type="checkbox"] {
+  display: none;
+}
+
+.slider-checkbox label {
+  display: block;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  background: #d2d2d2;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.slider-checkbox label::before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #c3c3c3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.2s ease-in-out;
+}
+.slider-checkbox [type="checkbox"]:checked + label {
+  background: linear-gradient( 120deg,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+
+.slider-checkbox [type="checkbox"]:checked + label::before {
+  -webkit-transform: translateX(100%); 
+  transform: translateX(100%); 
+}
+.container{
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+}
+.cardGrid{
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows: 45vh;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+.list{
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    padding: 3vh 0;
+}
+.annually{
+  width: 8%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: hsl(234, 14%, 74%);
+}
+.monthly{
+  width: 8%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: hsl(234, 14%, 74%);
+}
+.title{
+    text-align: center;
+    padding: 4vh 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: hsl(232, 13%, 33%);
+}
+.text{
+    height: 30vh;
+    width: 100%;
+}
+.cardBasic{
+    background: white;
+    border-radius: 2vh;
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  position: relative; 
+  bottom: -5rem;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+.titleCard{
+    padding: 2vh 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: hsl(234, 14%, 74%);
+}
+.price{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: hsl(232, 13%, 33%);
+}
+.itensList{
+    border-top: 1px solid hsl(240, 78%, 98%);
+    padding: 1vh 0;
+    width: 80%;
+    margin: auto;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+}
+.itensList:last-child{
+    border-top: 1px solid hsl(240, 78%, 98%);
+    padding: 1vh 0;
+    width: 80%;
+    margin: auto;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid hsl(240, 78%, 98%);
+}
+.geral{
+    background: url(images/bg-bottom.svg) no-repeat bottom left, url(images/bg-top.svg) no-repeat right top, hsl(240, 78%, 98%);
+    background-repeat: no-repeat;
+    position: initial;
+    height: 100%;
+    min-height: 185vh;
+    width: auto;
+}
+.cardProfessional{
+    background: linear-gradient(120deg,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 2vh;
+    transform: scale(1.1);
+}
+.cardMaster{
+  background: white;
+  border-radius: 2vh;
+}
+.professional{
+  color: hsl(240, 78%, 98%);
+}
+.learnMore{
+    width: 50%;
+    padding: 2vh 8vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    background: linear-gradient( 120deg,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    text-transform: uppercase;
+    color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.learnMore:hover{
+  border: 1px solid hsl(232, 13%, 33%);
+  border-radius: 1vh;
+  background: transparent;
+  color: hsl(237, 63%, 64%);
+}
+.cardProfessional h2:nth-child(2){
+  color: hsl(240, 78%, 98%);
+}
+.cardProfessional .list li:nth-child(n){
+  color: hsl(240, 78%, 98%);
+}
+.cardBasic .list li:nth-child(n), .cardMaster{
+  color: hsl(234, 14%, 74%);
+}
+.cardProfessional .learnMore{
+  background: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+}
+.cardProfessional .learnMore:hover{
+  border: 1px solid hsl(240, 78%, 98%);
+  color: hsl(240, 78%, 98%);
+  background: transparent;
+}
+@media screen and (min-width: 0px){
+    .cardGrid{
+        grid-template-columns: 90%;
+        grid-template-rows: 45vh 45vh 45vh;
+        grid-gap: 2vh;
+    }
+    .list{
+        list-style: none;
+        justify-content: center;
+        text-align: center;
+        padding: 3vh 0;
+    }
+    .annually{
+      width: 28%;
+  }
+  .monthly{
+      width: 28%;
+  }
+  .title{
+    text-align: center;
+    padding: 4vh 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: hsl(232, 13%, 33%);
+}
+.text{
+    height: 30vh;
+    width: 100%;
+}
+.cardBasic{
+    background: white;
+    border-radius: 2vh;
+}
+.titleCard{
+    padding: 2vh 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: hsl(234, 14%, 74%);
+}
+.price{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: hsl(232, 13%, 33%);
+}
+.itensList{
+    border-top: 1px solid hsl(240, 78%, 98%);
+    padding: 1vh 0;
+    width: 80%;
+    margin: auto;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+}
+.itensList:last-child{
+    border-top: 1px solid hsl(240, 78%, 98%);
+    padding: 1vh 0;
+    width: 80%;
+    margin: auto;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid hsl(240, 78%, 98%);
+}
+.cardProfessional{
+    transform: scale(1);
+}
+.cardMaster{
+  background: white;
+  border-radius: 2vh;
+}
+.professional{
+  color: hsl(240, 78%, 98%);
+}
+.learnMore{
+    width: 50%;
+    padding: 2vh 8vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    background: linear-gradient( 120deg,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    text-transform: uppercase;
+    color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+}
+
+@media screen and (min-width: 992px){
+    .cardGrid {
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 45vh;
+        grid-gap: 0;
+    }
+    .list{
+        list-style: none;
+        justify-content: center;
+        text-align: center;
+        padding: 3vh 0;
+    }
+    .annually{
+      width: 28%;
+  }
+  .monthly{
+      width: 28%;
+  }
+  .title{
+    text-align: center;
+    padding: 4vh 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: hsl(232, 13%, 33%);
+}
+.text{
+    height: 30vh;
+    width: 100%;
+}
+.cardBasic{
+    background: white;
+    border-radius: 2vh;
+}
+.titleCard{
+    padding: 2vh 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: hsl(234, 14%, 74%);
+}
+.price{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: hsl(232, 13%, 33%);
+}
+.itensList{
+    border-top: 1px solid hsl(240, 78%, 98%);
+    padding: 1vh 0;
+    width: 80%;
+    margin: auto;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+}
+.itensList:last-child{
+    border-top: 1px solid hsl(240, 78%, 98%);
+    padding: 1vh 0;
+    width: 80%;
+    margin: auto;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid hsl(240, 78%, 98%);
+}
+.cardProfessional{
+    transform: scale(1.1);
+}
+.cardMaster{
+  background: white;
+  border-radius: 2vh;
+}
+.professional{
+  color: hsl(240, 78%, 98%);
+}
+.learnMore{
+    width: 50%;
+    padding: 2vh 8vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    background: linear-gradient( 120deg,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    text-transform: uppercase;
+    color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+}
+@media screen and (min-width: 1200px){
+    .cardGrid{
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows: 45vh;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+}
